@@ -26,7 +26,6 @@ module.exports.getAllPokemon = (req, res) => {
   } else {
     Pokemon.findAll({
       order: ["name"],
-      limit: req.query.limit ? parseInt(req.query.limit) : 5,
     })
       .then((pokemons) => {
         const message = "La liste des pokémons a bien été récupérée.";
